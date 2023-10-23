@@ -1,0 +1,37 @@
+1) load the driver:
+	class.forName("com.mysql.jdbc.Driver") 
+
+2) create a connection:
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/dbname",","root","sisteccse");
+
+url= jdbc:mysql://localhost:3307/dbname
+
+3) Create query, Statement, preparedStatement, callableStatement
+
+String q="select * from student";
+Statement stmt=con.createStatement();
+ResultSet set=stmt.executeQuery(q);
+
+4) Process the data:
+	while(set.next())
+	{
+	   int id=set.getInt("studentId");
+	   System.out.println(id);
+	}
+
+5) close the connection
+	
+	con.close();
+
+BATCH PROCESSING IS THE MULTIPLE ROW INSERT 
+-----------------------------------------------
+import java.sql.*;
+
+public class main{
+
+public static void main(String[] arr){
+class.forName("com.mysql.cj.jdbc.Driver");
+}
+}
+
+	
